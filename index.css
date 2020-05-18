@@ -1,0 +1,412 @@
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	background-color: white;
+	color: black;
+	/*max-width: 1440px;
+	margin: auto;*/
+}
+
+nav{
+	background-color: white;
+	color: blue;
+	padding: 5px 20px;
+}
+
+ul{
+	list-style-type: none;
+}
+
+a{
+	color: blue;
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: underline;
+}
+.logo a:hover{
+	text-decoration: none;
+}
+
+/*Mobile Menu*/
+.menu{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.toggle{
+	order: 1;
+}
+
+.item.button{
+	order: 2;
+}
+
+.item{
+	width: 100px;
+	text-align: center;
+	order: 3px;
+	display: none;
+}
+
+.item.active{
+	display: block;
+}
+
+.menu li{
+	font-size: 16px;
+	padding: 15px 15px;
+	white-space: nowrap;
+}
+
+.logo a, .toggle a{
+	font-size: 20px;
+}
+
+.button.secondary{
+	border-bottom: 1px #444 solid;
+}
+
+.thumbnail{
+	width: 100%;
+}
+
+#footer{
+	padding: 20px 10px 20px;
+	margin-top: 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	background-color: #111180; /*soft blue color.*/
+	color: white;
+
+}
+
+#ground{
+	padding: 20px 10px 20px 10px;
+	margin-top: 10px;
+	text-align: center;
+	text-decoration: none;
+	display: block;
+	background-color: hsl(231, 69%, 60%); /*soft blue color.*/
+	color: white;
+
+}
+form{
+	width: auto;
+	text-align: center;
+}
+
+
+.nav nav-tab{
+	margin-left: 5px;
+}
+
+
+.column{
+	float: left;
+	width: 20%;
+	padding: 10px;
+	margin-left: 5px;
+	overflow: hidden;
+	width: auto;
+	float: left; 
+	margin-top: none;
+}
+
+.column1{
+	float: left;
+	width: 300px;
+	padding: 5px;
+	margin-left: 5px;
+	margin-top: 5px;
+	overflow: hidden;
+	
+	/*height: 300px;*/ /*this can be removed.*/
+}
+
+.row::after { 
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.bluebg{
+	border-radius: 150px 0 0 150px;
+	height: 300px;
+	width: 500px;
+	position: absolute;
+	top: 100px;
+	right: 100px;
+	background-color: hsl(231, 69%, 60%);
+	overflow: hidden;
+	/*z-index: 1;*/
+}
+
+.bluebg1{
+	border-radius: 0px 150px 150px 0px;
+	height: 250px;
+	width: 300px;
+	position: absolute;
+	top: 100px;
+	right: 100px;
+	background-color: hsl(231, 69%, 60%);
+	overflow: hidden;
+	/*z-index: 1;*/
+}
+
+.active{
+	 background-color:black;
+     color:white;
+ }
+
+
+
+li{
+	display: block;
+	width: 80px;
+	text-align: center;
+	float: left;
+
+}
+
+li:hover{
+	/*background-color: white;*/
+	color: white;
+}
+
+.btn-secondary{
+	background-color: hsl(0, 94%, 66%); /*soft red color.*/
+	padding-right: 50px;
+	padding-left: 50px;
+}
+
+.btn-secondary-blue{
+	background-color: hsl(231, 69%, 60%); /*soft blue color.*/
+	padding-right: 50px;
+	padding-left: 50px;
+}
+
+.click-trigger,
+.element { height: 20px; width: 20px; }
+.click-trigger { background-color: red; display: block; }
+.element { background-color: blue; }
+
+.hidden { display: none; }
+.shown { display: block; }
+
+
+.card{
+	background-color: white;
+	text-align: center;
+	padding-top: 40px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+
+.card img{
+	height: 100px;
+	width: 100px;
+	align-items: center;
+}
+
+
+
+.divLeft {
+    width:100px;
+    display:block;
+    float: left;
+    position: relative;
+
+}
+.divRight {
+    width:100px;
+    display:block;
+    float: right;
+}
+
+.inputg{
+	display: inline;
+	align-content: center;
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+.divads{
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.divads img{
+	width: 70%;
+}
+
+/*Tablet menu*/
+@media all and (min-width: 600px) {
+  .menu{
+  	justify-content: center;
+  }
+  .logo{
+  	flex: 1;
+  }
+  .toggle{
+  	flex: 1;
+  	text-align: right;
+  }
+  .item.button{
+  	width: auto;
+  	order: 1;
+  	display: block;
+  }
+  .toggle{
+  	order: 2;
+  }
+  .button.secondary{
+  	border: 0;
+  }
+  .button a{
+  	padding: 7.5px 15px;
+  	background: teal;
+  	border: 1px #006d6d solid;
+  }
+  .button.secondary a{
+  	background: transparent;
+  }
+  .button a:hover{
+  	text-decoration: none;
+  }
+  .button:not(.secondary) a:hover{
+  	background: #006d6d;
+  	border-color: #005959;
+  }
+  .button.secondary a:hover{
+  	color: #ddd;
+  }
+}
+
+
+/*Desktop menu*/
+@media all and (min-width: 600px){
+	.item{
+		display: block;
+		width: auto;
+	}
+	.toggle{
+		display: none;
+	}
+	.logo{
+		order: 0;
+	}
+	.item{
+		order: 1;
+	}
+	.button{
+		order: 2;
+	}
+	.menu li{
+		padding: 15px 10px;
+	}
+	.menu li{
+		padding-right: 0;
+	}
+}
+
+
+@media screen and (max-width: 600px) {
+  .nav.responsive {position: relative; z-index: 3;}
+  .nav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.bluebg{
+	float: left;
+}
+.column{
+    	width: 100%;
+    	text-align: center;
+
+    }
+   .column1{
+    	width: 100%;
+    	text-align: center;
+    }
+    
+    #container{
+    	display: inline-block;
+    	align-content: center;
+
+    }
+    .row {
+    	flex-direction: column;
+    	display: block;
+  	}	
+
+
+  	.divads{
+  		display: block;
+  	}
+
+input[type=text], select, textarea{
+	width: 100%;
+	padding: 12px;
+	border:1px solid #ccc;
+	font-weight: bold;
+	text-decoration: none;
+	border-radius: 5px;
+	/*text-decoration-color: blue;*/
+	padding-top: 14px;
+	margin-bottom: 20px;
+	box-sizing: border-box;
+	resize: vertical;
+}
+
+  .nav.responsive a {
+    float: none;
+    display: block;
+    text-align: center;
+  }
+
+}
